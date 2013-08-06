@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Almuerzo</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,400italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+	<div id="container">
+		{% block title %}
+		<div id="title">Almuerzo</div>
+		<div id="date">{% now "DATE_FORMAT" %}</div>
+		{% endblock %}
+
+		{% block contents %}
+
+		{% endblock %}
+	</div>
+</body>
+</html>

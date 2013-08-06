@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+
+	<br>Hey there, who are you?
+	<ul>
+	{% for user in users %}
+		<li><a href="/setuser/{{ user.id }}/">{{ user.name }}</a></li>
+	{% endfor %}
+	</ul>
+	
+{% endblock %}

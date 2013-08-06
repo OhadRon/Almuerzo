@@ -1,0 +1,15 @@
+{% extends 'loggedin.html' %}
+
+	{% block usercontent %}
+
+	{% if place %}
+
+		We have already eaten {{ place.name }} today, good night.
+
+	{% else %}
+
+		We have not eaten today. We are probably quite hungry by now.
+
+	{% endif %}
+	
+	{% endblock %}

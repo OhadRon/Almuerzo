@@ -1,0 +1,54 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+	color: #fff;
+	margin: 0;
+	margin-bottom: 30px;
+	padding: 0;
+	background-color: #e8b968;
+}
+
+#container{
+	padding: 5px 20px;
+
+}
+
+div#title{
+	font-size: 75px;
+}
+
+div#date{
+	font-size: 30px;
+	font-style: italic;
+}
+
+#userpart{
+	margin: 10px 0px;
+}
+
+.user{
+	font-size: 17px;
+}
+ul{
+	margin: 5px 0;
+}
+li{
+	list-style: circle;
+}
+
+.placename{
+	font-weight: 100;
+}
+
+a, a:visited{
+	color: #fff;
+}
+
+#usercontent{
+	font-size: 35px;
+}
+
+.alreadyvoted{
+	margin-top: 10px;
+	font-size: 20px;
+}

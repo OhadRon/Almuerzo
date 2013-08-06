@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+
+	{% block userheader %}
+	<div id="userpart">
+		<span class="user">Hey {{ username }}!</span>
+	</div>
+	{% endblock %}
+
+	<div id="usercontent">
+	{% block usercontent %}
+
+	{% endblock %}
+	<br><a href="/signout/" class="user">sign out</a>
+	</div>
+{% endblock %}

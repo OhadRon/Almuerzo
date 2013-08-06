@@ -1,0 +1,32 @@
+{% extends 'loggedin.html' %}
+
+{% block usercontent %}
+
+{% if voted %}
+
+	You have voted for {{ voted_for }}. Check again on 11:30 to know what we eat today.
+
+{% else %}
+
+	So, what do you want to eat today?
+	<ul>
+		{% for place in places %}
+			<li> <a href="/chooseplace/{{ place.id }}">{{place.name}}</a></li>
+		{% endfor %}
+	</ul>
+	{% if votes_today %}
+	<div class="alreadyvoted">
+	People have already voted:
+	<ul>
+		{% for vote in votes_today %}
+			<li> {{ vote.voter.name }}: <span class="placename">{{ vote.place.name }}</span></li>
+		{% endfor %}		
+	</ul>
+	</div>
+	{% else %}
+	No one else has voted yet.
+	{% endif %}
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'loggedin.html' %}
+
+	{% block usercontent %}
+
+	Today, we eat {{ place }}.
+	<br>Who's going? 
+	<br>
+	{% for person in people %}
+		{{ person.name }}
+	{% endfor %}
+	
+	{% endblock %}
