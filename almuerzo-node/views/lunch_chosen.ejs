@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Almuerzo - Lunch Chosen</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <h1>Almuerzo</h1>
+    <h2>Hello, <%= username %>!</h2>
+    <p>Today's lunch place is: <%= place %></p>
+    <p>People who voted for it:</p>
+    <ul>
+        <% people.forEach(function(person) { %>
+            <li><%= person.name %></li>
+        <% }); %>
+    </ul>
+    <a href="/signout">Sign out</a>
+</body>
+</html>

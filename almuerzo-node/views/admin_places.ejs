@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Almuerzo - Admin - Places</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <h1>Almuerzo - Admin - Places</h1>
+    <h2>Manage Places</h2>
+    <ul>
+        <% places.forEach(function(place) { %>
+            <li><%= place.name %></li>
+        <% }); %>
+    </ul>
+    <h2>Add New Place</h2>
+    <form hx-post="/admin/places/add" hx-target="#places-list" hx-swap="innerHTML">
+        <input type="text" name="name" placeholder="Place Name">
+        <button type="submit">Add Place</button>
+    </form>
+    <div id="places-list"></div>
+    <a href="/admin">Back to Admin Panel</a>
+    <a href="/signout">Sign out</a>
+</body>
+</html>

@@ -1,2 +1,5 @@
 database.db
 *.pyc
+almuerzo-node/node_modules/
+*.db
+package-lock.json

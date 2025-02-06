@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Almuerzo - Vote</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <h1>Almuerzo</h1>
+    <h2>Hello, <%= username %>!</h2>
+    <% if (voted) { %>
+        <p>You already voted for: <%= voted_for %></p>
+    <% } else { %>
+        <p>Vote for your lunch place:</p>
+        <ul>
+            <% places.forEach(function(place) { %>
+                <li><a href="/chooseplace/<%= place.id %>"><%= place.name %></a></li>
+            <% }); %>
+        </ul>
+    <% } %>
+    <a href="/signout">Sign out</a>
+</body>
+</html>

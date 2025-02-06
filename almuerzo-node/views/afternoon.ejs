@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Almuerzo - Afternoon</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <h1>Almuerzo</h1>
+    <h2>Hello, <%= username %>!</h2>
+    <% if (place) { %>
+        <p>Today's lunch place is: <%= place %></p>
+    <% } else { %>
+        <p>No lunch place was chosen today.</p>
+    <% } %>
+    <a href="/signout">Sign out</a>
+</body>
+</html>

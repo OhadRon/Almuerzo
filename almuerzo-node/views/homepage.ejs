@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Almuerzo - Homepage</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <h1>Almuerzo</h1>
+    <h2>Choose your user:</h2>
+    <ul>
+        <% users.forEach(function(user) { %>
+            <li><a href="/?userid=<%= user.id %>"><%= user.name %></a></li>
+        <% }); %>
+    </ul>
+</body>
+</html>

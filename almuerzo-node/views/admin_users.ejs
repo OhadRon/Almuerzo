@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Almuerzo - Admin - Users</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <h1>Almuerzo - Admin - Users</h1>
+    <h2>Manage Users</h2>
+    <ul>
+        <% users.forEach(function(user) { %>
+            <li><%= user.name %></li>
+        <% }); %>
+    </ul>
+    <h2>Add New User</h2>
+    <form hx-post="/admin/users/add" hx-target="#users-list" hx-swap="innerHTML">
+        <input type="text" name="name" placeholder="User Name">
+        <input type="email" name="email" placeholder="User Email">
+        <button type="submit">Add User</button>
+    </form>
+    <div id="users-list"></div>
+    <a href="/admin">Back to Admin Panel</a>
+    <a href="/signout">Sign out</a>
+</body>
+</html>
